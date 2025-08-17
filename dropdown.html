@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="styles/dropdown.css">
+</head>
+<body>
+    <div class="dropdown">
+        <button type="button" class="dropdown-toggle">
+            <span>Menu</span>
+            <span>></span>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <div class="sub-dropdown">
+                <a href="#">
+                    <span>Submenu 1</span>
+                    <span>></span>
+                </a>
+                <div class="sub-dropdown-content">
+                    <a href="#">Sub Link 1</a>
+                    <a href="#">Sub Link 2</a>
+                    <div class="sub-dropdown">
+                        <a href="#">
+                            <span>Submenu 1.1</span>
+                            <span>></span>
+                        </a>
+                        <div class="sub-dropdown-content">
+                            <a href="#">Sub Link 1</a>
+                            <a href="#">Sub Link 2</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">Sub Link 4</a>
+            </div>
+            <a href="#">Link 3</a>
+            <div class="sub-dropdown">
+                <a href="#">
+                    <span>Submenu 2</span>
+                    <span>></span>
+                </a>
+                <div class="sub-dropdown-content">
+                    <a href="#">Sub Link 1</a>
+                    <a href="#">Sub Link 2</a>
+                    <div class="sub-dropdown">
+                        <a href="#">
+                            <span>Submenu 2.1</span>
+                            <span>></span>
+                        </a>
+                        <div class="sub-dropdown-content">
+                            <a href="#">Sub Link 1</a>
+                            <a href="#">Sub Link 2</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">Sub Link 4</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/dropdown.js"></script>
+</body>
+</html>
