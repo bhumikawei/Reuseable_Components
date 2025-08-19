@@ -61,4 +61,13 @@ $(document).ready(function() {
     //initialize the first slide
     goToSlide(0);
 
+    const intervalDuration = 1000;
+    setInterval(function() {
+        currentIndex = currentIndex + 1;
+        if( currentIndex >= slideCount) {
+            currentIndex = 0;
+        }   
+        goToSlide(currentIndex);
+    }, intervalDuration);
+
 })
