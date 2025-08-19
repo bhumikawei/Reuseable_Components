@@ -1,7 +1,7 @@
-/* === GLOBAL STYLES === */
+/* === GLOBAL RESET & THEME === */
 body {
   font-family: 'Orbitron', sans-serif;
-  background: #0a0a0f; /* dark futuristic background */
+  background: #0a0a0f; /* dark cyberpunk background */
   color: #ff69b4; /* neon pink text */
   margin: 0;
   padding: 40px;
@@ -14,7 +14,11 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* === ACCORDION GENERAL === */
+/* =======================================================
+   ACCORDION STYLES
+   ======================================================= */
+
+/* Accordion wrapper */
 .accordion {
   margin: 20px auto;
   max-width: 700px;
@@ -22,10 +26,10 @@ h2 {
   overflow: hidden;
 }
 
-/* Accordion buttons */
+/* Accordion button (tab) */
 .accordion-toggle {
   display: flex;
-  justify-content: space-between; /* title on left, arrow on right */
+  justify-content: space-between; /* title left, arrow right */
   align-items: center;
   width: 100%;
   padding: 15px 20px;
@@ -42,20 +46,20 @@ h2 {
 }
 
 .accordion-toggle:hover {
-  background: rgba(255, 20, 147, 0.15); /* slight neon pink glow on hover */
+  background: rgba(255, 20, 147, 0.15); /* neon hover glow */
 }
 
-/* Accordion icon rotation */
+/* Arrow icon animation */
 .accordion-toggle i {
   transition: transform 0.3s ease;
 }
 .accordion-tab.active .accordion-toggle i {
-  transform: rotate(180deg); /* rotate arrow when opened */
+  transform: rotate(180deg);
 }
 
-/* Content area */
+/* Content box */
 .accordion-tab-content {
-  display: none; /* hidden by default */
+  display: none;
   padding: 15px 20px;
   background: rgba(10, 0, 20, 0.8);
   color: #f8d1ff;
@@ -66,45 +70,125 @@ h2 {
   text-align: left;
 }
 
-/* Show content when active */
+/* Show active tab */
 .accordion-tab.active .accordion-tab-content {
   display: block;
   animation: fadeIn 0.5s ease;
 }
 
+/* Animation effect */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* === VERTICAL ACCORDION (first section) === */
+/* Vertical accordion (default) */
 .accordion .accordion-tab {
   margin-bottom: 5px;
 }
 
-/* === HORIZONTAL ACCORDION / TABS (second section) === */
-.accordion-controls {
-  display: flex; /* buttons side by side */
+/* Horizontal accordion (tabs style) */
+.accordion[data-horizontal] .accordion-controls {
+  display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 15px;
 }
 
-.accordion-controls .accordion-toggle {
-  flex: 1; /* equal size buttons */
+.accordion[data-horizontal] .accordion-controls .accordion-toggle {
+  flex: 1;
   border-radius: 8px;
   border: 2px solid #ff69b4;
   box-shadow: 0 0 10px #ff00ff;
 }
 
-/* For horizontal, only one tab content shows at a time */
 .accordion[data-horizontal] .accordion-tab-content {
+  border: 2px solid #ff69b4;
+  border-radius: 12px;
   display: none;
 }
-
 .accordion[data-horizontal] .accordion-tab.active .accordion-tab-content {
   display: block;
   animation: fadeIn 0.5s ease;
-  border: 2px solid #ff69b4;
-  border-radius: 12px;
 }
+
+/* =======================================================
+   DROPDOWN MENU STYLES
+   ======================================================= */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.dropdown-toggle {
+  background: rgba(20, 20, 30, 0.9);
+  color: #ff69b4;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 2px solid #ff69b4;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff00ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 150px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba(15, 0, 25, 0.95);
+  min-width: 200px;
+  box-shadow: 0 0 15px #ff00ff;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  z-index: 1;
+  margin-top: 5px;
+}
+
+.dropdown-content a {
+  color: #f8d1ff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255, 20, 147, 0.2);
+}
+
+/* Show dropdown on toggle hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Sub dropdown */
+.sub-dropdown {
+  position: relative;
+}
+
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  left: 100%; /* nest to the right */
+  top: 0;
+  background: rgba(15, 0, 25, 0.95);
+  min-width: 200px;
+  box-shadow: 0 0 15px #ff00ff;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+  display: block;
+}
+
+
+
