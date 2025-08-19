@@ -98,4 +98,12 @@ body {
 #image-slider .pagination span.active,
 #image-slider .pagination span:hover {
     background-color: #398edb;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    #image-slider, #image-slider .slides .slide {
+        height: 0;
+        padding-bottom: 59.895833333333333333%;
+    }
 }
