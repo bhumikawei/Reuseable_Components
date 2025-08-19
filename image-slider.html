@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="styles/image-slider.css">
+</head>
+<body>
+    <h2>JQuery Image Slider</h2>
+    <div id="image-slider">
+        <div class="slides">
+            <div class="slide" style="background-image: url(images12/gallery7.jpg);">
+                <img src="./images12/gallery7.jpg" alt="Description of Image 1">
+            </div>
+            <div class="slide" style="background-image: url(images12/gallery6.jpg);">
+                <img src="./images12/gallery6.jpg" alt="Description of Image 2">
+            </div>
+            <div class="slide" style="background-image: url(images12/gallery5.jpg);">
+                <img src="./images12/gallery5.jpg" alt="Description of Image 3">
+            </div>
+            <div class="slide" style="background-image: url(images12/gallery1.jpg);">
+                <img src="./images12/gallery1.jpg" alt="Description of Image 4">
+            </div>
+        </div>
+        <button class="prev" type="button">
+            <i class="fa-solid fa-circle-chevron-left"></i>
+        </button>
+        <button class="next" type="button">
+            <i class="fa-solid fa-circle-chevron-right"></i>
+        </button>
+        <div class="pagination"></div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/9054aed470.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/image-slider.js"></script>
+</body>
+</html>
