@@ -1,4 +1,4 @@
-const { render } = require("sass");
+
 
 var tableData = [
     {name: 'Alex John', position: 'Software Engineer', location: 'New York', age: 29, startDate: '2022/01/15', salary: '$150,000'},
@@ -39,7 +39,7 @@ $(document).ready(function() {
         renderTableData();
     })
 
-    $("table th").on("click", function() {
+    $("table th").on('click', function() {
         var columnName = $(this).attr('data-name');
         var sortDirection = $(this).attr('data-sort');
 
@@ -55,10 +55,10 @@ $(document).ready(function() {
     function renderTableData() {
         var searchVal = $("#searchInput").val().toLowerCase();
         var filteredData = tableData.filter(function(item) {
-            return Object.values(item).join('').toLowerCase().includes(searchVal);
+            return Object.values(item).join(' ').toLowerCase().includes(searchVal);
         })
 
-        var startIndex = (currentIndex - 1) * rowsPerPage;
+        var startIndex = (currentPage - 1) * rowsPerPage;
         var endIndex = startIndex + rowsPerPage;
 
         var paginatedItems = filteredData.slice(startIndex, endIndex);
@@ -107,4 +107,5 @@ $(document).ready(function() {
             })
             renderTableData();
         }
+        renderTableData();
 })
