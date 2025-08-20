@@ -5,3 +5,73 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    color: #fff;
+    background-color: #212529;
+    text-align: left;
+    cursor: pointer;
+}
+
+th div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.pagination-btn{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 6px;
+    outline: none;
+    margin-right: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pagination-btn:hover, .pagination-btn.active {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+input, select {
+    display: block;
+    padding: 6px 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+}
+
+th[data-sort="asc"] .sort-img {
+    transform: rotate(-90deg);
+}
+
+th[data-sort="desc"] .sort-img {
+    transform: rotate(-270deg);
+}
