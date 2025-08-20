@@ -27,24 +27,30 @@ $(document).ready(function() {
     });
 
     closeBtn.click(function() {
+        slidesContainer.animate({
+            paddingTop: 0,
+        });
         galleryWindow.fadeOut(animateSpeed);
     });
 
     galleryWindow.click(function(e) {
         if (e.target !== this) return;
+
+        slidesContainer.animate({
+            paddingTop: 0, 
+        });
         galleryWindow.fadeOut(animateSpeed);
     });
 
     galleryThumbnails.click(function() {
         var index = $(this).index();
-        galleryWindow.fadeIn(animateSpeed, function() {
+        galleryWindow.fadeIn(animateSpeed)
             goToSlide(index);
-        }); 
     });
 
     function goToSlide(index) {
         var alt = slides.eq(index).attr("alt");
-        var imgInfo = $("..img-info");
+        var imgInfo = $(".img-info");
         currentIndex = index;
         imgInfo.html(alt);
         slides.removeClass("active").eq(index).addClass("active");
