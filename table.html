@@ -7,6 +7,61 @@
     <link rel="stylesheet" href="styles/table.css">
 </head>
 <body>
+    <h2>JQuery Tables</h2>
+    <div class="table-controls">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <select id="rowsPerPage">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+    </div>
+    <table id="customTable">
+        <thead>
+            <tr>
+                <th data-name="name" data-sort="asc">
+                    <div>
+                        <span>Name</span>
+                        <i class="sort-img" width="8" class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </th>
+                <th data-name="position" data-sort="asc">
+                    <div>
+                        <span>Position</span>
+                        <i class="sort-img" width="8" class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </th>
+                <th data-name="location" data-sort="asc">
+                    <div>
+                        <span>Location</span>
+                        <i class="sort-img" width="8" class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </th>
+                <th data-name="age" data-sort="asc">
+                    <div>
+                        <span>Age</span>
+                        <i class="sort-img" width="8" class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </th>
+                <th data-name="startDate" data-sort="asc">
+                    <div>
+                        <span>Start Date</span>
+                        <i class="sort-img" width="8" class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </th>
+                <th data-name="salary" data-sort="asc">
+                    <div>
+                        <span>Salary</span>
+                        <i class="sort-img" width="8" class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <div id="pagination"></div>
     <script src="https://kit.fontawesome.com/9054aed470.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/table.js"></script>
